@@ -1,0 +1,8 @@
+{
+  "ProjectName": "Splash Access Admin",
+  "ProjectGuid": "13fbf3a4-aff3-4e5c-80db-d5e93268d4c8",
+  "projectVersion": 1,
+  "ProjectTypeGuids": "{da2f9169-4696-40a5-919b-f73985228cac}",
+  "FrameworkVersion": "0.0.1",
+  "Framework": "MobileWebsite"
+}
