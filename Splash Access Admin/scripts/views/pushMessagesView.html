@@ -1,0 +1,22 @@
+<div data-role="view" id="push-messages-view" data-model="app.models.pushMessagesViewModel" data-init="app.models.pushMessagesViewModel.init">
+    <div class="push-messages">
+        <div class="title-text">Send Push Messages</div>
+        <form>
+            <div class="input-without-icon">
+                <input type="text" placeholder="Title" data-bind="value: messageModel.title" required autofocus>
+            </div>
+
+            <div class="input-without-icon">
+                <input type="text" placeholder="Message" data-bind="value: messageModel.message" required>
+            </div>
+
+            <div id="mac-addresses"></div>
+            
+            <a class="submit" data-bind="events: { click: send }"><span>SEND</span></a>
+
+            <div class="error"></div>
+            <div class="info"></div>
+        </form>     
+            
+    </div>
+</div>
