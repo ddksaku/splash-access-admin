@@ -25,8 +25,8 @@ app.models.logInViewModel = (function() {
 
     var viewModel = kendo.observable({
         model: {
-            username: 'admin',
-            password: 'admin'
+            username: '',
+            password: ''
         },
 
         logIn: logIn     
