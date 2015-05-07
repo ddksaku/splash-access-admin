@@ -3,6 +3,7 @@
 app.models.pushMessagesViewModel = (function() {
     var provider = app.data.defaultprovider;
     var $macAddresses;
+    var $select;
 
     var messageModel = new kendo.data.DataSource({
         title: '',
@@ -12,9 +13,9 @@ app.models.pushMessagesViewModel = (function() {
     var init = function() {
         provider.data('MacAddresses').get().then(
             function(data) {
-                var $select = $("<select multiple='multiple' data-placeholder='Select mac addresses...'/>");
+                $select = $("<select multiple='multiple' data-placeholder='Select mac addresses...'/>");
                 $.each(data.result, function(index, macAddress) {
-                    $select.append("<option value='' + macAddress.Id + ''>" + macAddress.Identifier + " ( " + macAddress.MacAddress + " )</option>");
+                    $select.append("<option value='" + macAddress.Id + "'>" + macAddress.Identifier + " ( " + macAddress.MacAddress + " )</option>");
                 });
                 $('#mac-addresses').html($select);
                 $macAddresses = $select.kendoMultiSelect().data('kendoMultiSelect');
@@ -25,9 +26,15 @@ app.models.pushMessagesViewModel = (function() {
         $('.error').empty();
         $('.info').empty();
 
-        var macAddresses = $macAddresses.value();
+        var macAddresses = $macAddresses.value().toString().split(',');
         if (messageModel.message && macAddresses.length > 0) {
+            var filter = [];
+            $.each(macAddresses, function(index, macAddress) {
+                filter.push('{\"Parameters.macAddresses\":\"' + macAddress + '\"}');
+            });
+            filter = filter.join(',');
             var notification = {
+                'Filter': "{\"$or\":[" + filter + "]}",
                 'Android': {
                     'data': {
                         'title': messageModel.title,
@@ -57,10 +64,10 @@ app.models.pushMessagesViewModel = (function() {
 
             provider.push.send(notification,
                 function(data) {
-                    $('.info').text(JSON.stringify(data));
+                    $('.info').text('Successfully sent a push message.');
                 },
                 function(error) {
-                    $('.error').text(JSON.stringify(data));
+                    $('.error').text('Failed to send a push message.');
                 });
         } else {
             $('.error').text('Please input both message and mac addresses.');
