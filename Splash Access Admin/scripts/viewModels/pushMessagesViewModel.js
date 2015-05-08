@@ -53,12 +53,6 @@ app.models.pushMessagesViewModel = (function() {
                         'Title': messageModel.title,
                         'Message': messageModel.message
                     }
-                },
-                'Windows': {
-                    'Toast': {
-                        'template': messageModel.title,
-                        'text': [ messageModel.message ]
-                    }
                 }
             }
 

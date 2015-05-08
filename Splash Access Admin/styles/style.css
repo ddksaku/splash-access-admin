@@ -173,6 +173,8 @@ h3 { font-size: 12px; font-weight: normal; font-family: open-sans, sans-serif; }
 .login .forgot-password-text { height: auto; font-family: open-sans, sans-serif; font-size: 20px; color: #fff; display: block; text-align: center; }
 .login .social-sites { width: 100%; height: 100%; margin: 0 0 20px 0; }
 
+.login .error { margin: 20px; text-align: center; color: red; font-family: first-home, sans-serif; font-size: 20px; }
+
 /* ================================================================ *\
 	Push messages
 \* ================================================================ */
