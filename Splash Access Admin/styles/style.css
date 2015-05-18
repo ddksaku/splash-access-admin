@@ -134,6 +134,7 @@ h3 { font-size: 12px; font-weight: normal; font-family: open-sans, sans-serif; }
 		 -o-transform: translate(-50%, -50%); 
         	transform: translate(-50%, -50%); 
 }
+.white { color: white; }
 
 /* ================================================================ *\
 	Icons 
@@ -187,5 +188,23 @@ h3 { font-size: 12px; font-weight: normal; font-family: open-sans, sans-serif; }
 
 .push-messages .error { margin: 20px; text-align: center; color: red; font-family: first-home, sans-serif; font-size: 20px; }
 .push-messages .info { margin: 20px; text-align: center; color: green; font-family: first-home, sans-serif; font-size: 20px; }
+
+/* ================================================================ *\
+	Ibeacons
+\* ================================================================ */
+#ibeacons-view .km-content { background: #8fc64c; }
+.ibeacons { margin: 20px; height: 100%; }
+
+/* ================================================================ *\
+	Helps
+\* ================================================================ */
+#helps-view .km-content { background: #8fc64c; }
+.helps { margin: 20px; height: 100%; }
+
+/* ================================================================ *\
+	Mac Addresses
+\* ================================================================ */
+#macAddresses-view .km-content { background: #8fc64c; }
+.macAddresses { margin: 20px; height: 100%; }
 
 

@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
     <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.material.min.css" />
     <link rel="stylesheet" href="bower_components/kendo-mobile/styles/kendo.mobile.all.min.css" />
+    <link rel="stylesheet" href="libs/dataTables/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="libs/dataTables/css/dataTables.tableTools.css">
+    <link rel="stylesheet" href="libs/dataTables/css/dataTables.editor.css">
     <link href="styles/style.css" rel="stylesheet">
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/kendo-ui-core/js/kendo.ui.core.min.js"></script>
     <script src="bower_components/kendo-mobile/js/kendo.mobile.min.js"></script>
+    <script type="text/javascript" src="libs/dataTables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="libs/dataTables/js/dataTables.tableTools.min.js"></script>
+    <script type="text/javascript" src="libs/dataTables/js/dataTables.editor.min.js"></script>
     <script src="bower_components/everlive/min/everlive.all.min.js"></script>
     <script src="bower_components/pushPlugin-Phonegap/www/PushNotification.js"></script>
     <script src="app.js"></script>
@@ -20,6 +26,9 @@
     <script src="data/defaultProvider.js"></script>
     <script src="scripts/viewModels/logInViewModel.js"></script>
     <script src="scripts/viewModels/pushMessagesViewModel.js"></script>
+    <script src="scripts/viewModels/ibeaconsViewModel.js"></script>
+    <script src="scripts/viewModels/helpsViewModel.js"></script>
+    <script src="scripts/viewModels/macAddressesViewModel.js"></script>
 </head>
 <body id="kendo-ui-mobile-app">
     <div data-role="layout" data-id="main-layout">
@@ -43,9 +52,6 @@
             </li>
             <li>
                 <a href="scripts/views/ibeaconsView.html">Ibeacons</a>
-            </li>
-            <li>
-                <a href="scripts/views/messagesView.html">Messages</a>
             </li>
             <li>
                 <a href="scripts/views/helpsView.html">Helps</a>
