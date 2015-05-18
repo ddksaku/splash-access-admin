@@ -1,6 +1,5 @@
-<div data-role="view" id="push-messages-view" data-model="app.models.pushMessagesViewModel" data-init="app.models.pushMessagesViewModel.init">
+<div data-role="view" id="push-messages-view" data-model="app.models.pushMessagesViewModel" data-init="app.models.pushMessagesViewModel.init" data-layout="main-layout" data-title="Send Push Messages">
     <div class="push-messages">
-        <div class="title-text">Send Push Messages</div>
         <form>
             <div class="input-without-icon">
                 <input type="text" placeholder="Title" data-bind="value: messageModel.title" required autofocus>
@@ -17,6 +16,5 @@
             <div class="error"></div>
             <div class="info"></div>
         </form>     
-            
     </div>
 </div>

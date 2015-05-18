@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.material.min.css" />
     <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
     <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.material.min.css" />
+    <link rel="stylesheet" href="bower_components/kendo-mobile/styles/kendo.mobile.all.min.css" />
     <link href="styles/style.css" rel="stylesheet">
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/kendo-ui-core/js/kendo.ui.core.min.js"></script>
+    <script src="bower_components/kendo-mobile/js/kendo.mobile.min.js"></script>
     <script src="bower_components/everlive/min/everlive.all.min.js"></script>
     <script src="bower_components/pushPlugin-Phonegap/www/PushNotification.js"></script>
     <script src="app.js"></script>
@@ -20,5 +22,39 @@
     <script src="scripts/viewModels/pushMessagesViewModel.js"></script>
 </head>
 <body id="kendo-ui-mobile-app">
+    <div data-role="layout" data-id="main-layout">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+            <a data-role="button" href="#menu" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+        </div>
+    </div>
+    <!-- application views will be rendered here -->
+    </div>
+
+    <div data-role="drawer" id="menu" data-title="Menu">
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+        <ul data-role="listview">
+            <li>
+                <a href="scripts/views/macAddressesView.html">Mac Addresses</a>
+            </li>
+            <li>
+                <a href="scripts/views/ibeaconsView.html">Ibeacons</a>
+            </li>
+            <li>
+                <a href="scripts/views/messagesView.html">Messages</a>
+            </li>
+            <li>
+                <a href="scripts/views/helpsView.html">Helps</a>
+            </li>
+            <li>
+                <a href="scripts/views/pushMessagesView.html">Send Push Messages</a>
+            </li>
+        </ul>
+    </div>      
 </body>
 </html>
