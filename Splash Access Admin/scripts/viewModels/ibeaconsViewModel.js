@@ -23,6 +23,10 @@ app.models.ibeaconsViewModel = (function() {
                     "name": "Major"
                 },
                 {
+                    "label": "Enter Title",
+                    "name": "EnterTitle"
+                },
+                {
                     "label": "Enter Message",
                     "name": "EnterMessage"
                 }
@@ -44,6 +48,9 @@ app.models.ibeaconsViewModel = (function() {
                 },
                 {
                     "data": "Major"
+                },
+                {
+                    "data": "EnterTitle"
                 },
                 {
                     "data": "EnterMessage"

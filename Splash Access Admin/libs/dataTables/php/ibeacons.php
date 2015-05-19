@@ -25,6 +25,8 @@ Editor::inst( $db, 'Ibeacons', 'Id' )
 			->validator( 'Validate::notEmpty' ),
 		Field::inst( 'Major' )
 			->validator( 'Validate::notEmpty' ),
+		Field::inst( 'EnterTitle' )
+			->validator( 'Validate::notEmpty' ),
 		Field::inst( 'EnterMessage' )
 			->validator( 'Validate::notEmpty' )
 	)
