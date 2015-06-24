@@ -58,6 +58,37 @@ app.models.pushMessagesViewModel = (function() {
 
             provider.push.send(notification,
                 function(data) {
+                    provider.Users.get().then(
+                        function(data) { 
+                            if (data.result) {                                
+                                $.each(data.result, function(index, user) {                                    
+                                    if (user.PushEnabled == true) {
+                                        $.each(user.MacAddressIds, function(index, macAddress) {                                        
+                                            if ($.inArray(macAddress, macAddresses) > -1) {                                                  
+                                                var message = {
+                                                    'Title': messageModel.title,
+                                                    'Description': messageModel.message,
+                                                    'UserId': user.Id,
+                                                    'Time': getTimeNow()
+                                                };
+
+                                                provider.data('Messages').create(message,                                              
+                                                    function(data) {      
+                                                        console.log(JSON.stringify(data));                                                  
+                                                    },
+                                                    function(error) {
+                                                        console.error(JSON.stringify(error));
+                                                    });                                                                                              
+                                            }
+                                        });                                        
+                                    }                                    
+                                });
+                            } 
+                        },
+                        function(error) {
+                            console.error(JSON.stringify(error));
+                        });                                    
+
                     $('.info').text('Successfully sent a push message.');
                 },
                 function(error) {
