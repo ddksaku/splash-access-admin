@@ -19,8 +19,7 @@ Editor::inst( $db, 'Ibeacons', 'Id' )
 			->validator( 'Validate::notEmpty' )
 			->validator( 'Validate::unique' ),
 		Field::inst( 'Uuid' )
-			->validator( 'Validate::notEmpty' )
-			->validator( 'Validate::unique' ),
+			->validator( 'Validate::notEmpty' ),			
 		Field::inst( 'Minor' )
 			->validator( 'Validate::notEmpty' ),
 		Field::inst( 'Major' )
